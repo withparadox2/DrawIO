@@ -1,1 +1,64 @@
-<mxfile host="app.diagrams.net" modified="2020-08-08T01:51:13.567Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36" version="13.6.1" etag="gVZ4vbW7HiQyNa9NJWBN" type="github"><diagram id="1Qpf05O_ppHA1koodgPS">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-08-09T01:02:48.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36" etag="fJs5jeiDCH9Majdxbwuj" version="13.6.1" type="github">
+  <diagram id="1Qpf05O_ppHA1koodgPS" name="Page-1">
+    <mxGraphModel dx="1038" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-1" value="&lt;div&gt;4 bytes&lt;/div&gt;&lt;div&gt;IPCThreadState::self()-&amp;gt;getStrictModePolicy() |&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;STRICT_MODE_PENALTY_GATHER&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="70" y="60" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-3" value="4 bytes&lt;br&gt;接下来字符串长度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="120" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-5" value="下面字符串加上0~3 bytes的padding&lt;br&gt;&quot;android.os.IServiceManager&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="180" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-6" value="2 bytes&lt;br&gt;0&lt;br&gt;标识字符串结束" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-7" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="180" width="20" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-8" value="会对齐到4 bytes，例如大小为&lt;br&gt;7字节，实际分配的大小为8 bytes.&lt;br&gt;一个字符的大小为2 bytes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="465" y="225" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-9" value="Parcel IServiceManager.cpp#addService" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="30" width="230" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-10" value="4 bytes&lt;br&gt;接下来字符串长度" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="320" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-11" value="下面字符串加上0~3 bytes的padding&lt;br&gt;&quot;media.player&quot;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="380" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-12" value="2 bytes&lt;br&gt;0&lt;br&gt;标识字符串结束" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="450" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-13" value="存储的对象类型为 flat_binder_object&lt;br&gt;flags:&amp;nbsp;0x7f | FLAT_BINDER_FLAG_ACCEPTS_FDS&lt;br&gt;&lt;div&gt;&lt;span&gt;type:&amp;nbsp;BINDER_TYPE_BINDER&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;binder: weakRef&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;cookie: MediaPlayerService的指针&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="70" y="520" width="370" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-14" value="该对象的起始地址会保存在mObjects数组中" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="565" width="250" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-16" value="4 bytes&lt;br&gt;allowIsolated，这里为0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="630" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-17" value="Parcel mOut&amp;nbsp;&lt;br&gt;IPCThreadState.cpp#writeTransactionData" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="137" y="775" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-18" value="4 bytes (cmd)&lt;br&gt;BC_TRANSACTION" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="70" y="810" width="370" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-19" value="" style="rounded=0;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="70" y="880" width="370" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-20" value="binder_transaction_data" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="237" y="890" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4Szv_yec-C7Z6lsDFK47-21" value="target.ptr = 0&lt;br&gt;target.handle = fileId&lt;br&gt;code =&amp;nbsp;ADD_SERVICE_TRANSACTION&lt;br&gt;flags = 0&lt;br&gt;cookie = 0&lt;br&gt;&lt;div&gt;sender_pid = 0&lt;/div&gt;&lt;div&gt;sender_euid = 0&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;下面=右边的data皆为上图中的parcel&lt;/div&gt;&lt;div&gt;&lt;div&gt;data_size = data.ipcDataSize()&lt;/div&gt;&lt;div&gt;data.ptr.buffer = data.ipcData()&lt;/div&gt;&lt;div&gt;offsets_size = data.ipcObjectsCount()*sizeof(binder_size_t)&lt;/div&gt;&lt;div&gt;data.ptr.offsets = data.ipcObjects()&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="91" y="920" width="330" height="220" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
